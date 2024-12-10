@@ -1,0 +1,105 @@
+:root {
+    --green: #2ecc71;
+    --white: #ffffff;
+    --gray: #ecf0f1;
+    --shadow: rgba(0, 0, 0, 0.1);
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--gray);
+    color: var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px var(--shadow);
+    overflow: hidden;
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header {
+    background-color: var(--green);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  main {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ebook-viewer {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 1rem;
+  }
+  
+  .ebook-viewer img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px var(--shadow);
+  }
+  
+  .navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .nav-button {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    margin: 0 0.5rem;
+    background-color: var(--green);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-button:disabled {
+    background-color: var(--gray);
+    cursor: not-allowed;
+  }
+  
+  .nav-button:hover:not(:disabled) {
+    background-color: #27ae60;
+  }
+  
+  .nav-button:first-child {
+    margin-left: 0;
+  }
+  
+  .nav-button:last-child {
+    margin-right: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-button {
+      font-size: 0.9rem;
+      padding: 0.6rem;
+    }
+  }
+  
+  

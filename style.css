@@ -1,0 +1,555 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('bg.png') no-repeat center center fixed; /* Set bg.png as background */
+    background-size: cover; /* Ensure it covers the entire viewport */
+    color: white;
+    height: 100vh; /* Full height */
+}
+
+header {
+    background-color: rgba(76, 175, 80, 0.9); /* Slightly transparent green */
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-top: 10px; /* Space between logo and header */
+}
+
+/* ... (The rest of your CSS remains unchanged) ... */
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+nav ul li {
+    margin: 0 4px; /* Reduced margin for smaller boxes */
+    display: inline-block; /* Make headers appear in a box */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background for headers */
+    border-radius: 5px; /* Rounded corners */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px; /* Adjusted padding for smaller boxes */
+    display: block; /* Make the entire area clickable */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Light green box on hover */
+    color: #4caf50; /* Dark green text on hover */
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 28px; /* Responsive font size */
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 16px; /* Responsive font size */
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #ffeb3b; /* Yellow button */
+    color: #4caf50; /* Dark green text */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #fdd835; /* Darker yellow on hover */
+}
+.about, .book, .contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about h2, .book h2, .contact h2 {
+    font-size: 24px; /* Responsive font size */
+    margin-bottom: 20px;
+}
+
+.about p, .book p, .contact p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+footer {
+    background-color: rgba(76, 175, 80, 0.9); /* Same as header */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px; /* Space above footer */
+    border-radius: 5px; /* Rounded corners for footer */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    max-width: 1200px; /* Center the footer */
+    margin-left: auto; /* Center the footer */
+    margin-right: auto; /* Center the footer */
+}
+
+footer p {
+    margin: 10px 0; /* Margin for footer text */
+}
+
+.social-media {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the icons */
+    margin-top: 10px;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 5px; /* Reduced margin for social media icons */
+    font-size: 20 px;
+    padding: 8px; /* Padding for the box */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background for social media boxes */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Light green box on hover */
+    color: #4caf50; /* Dark green text on hover */
+}
+.books-section {
+    max-width: 1200px; /* Set a maximum width for the section */
+    margin: 40px auto; /* Center the section horizontally */
+    text-align: center; /* Center the text */
+}
+
+.books-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Space between boxes */
+}
+
+.prayer-books-box {
+    background-color: #ffffff; /* White background for the box */
+    border: 1px solid #ccc; /* Border for the box */
+    border-radius: 5px; /* Rounded corners */
+    padding: 20px; /* Padding inside the box */
+    text-align: center; /* Center the text */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Transition for hover effect */
+    width: 250px; /* Fixed width for the box */
+}
+
+.prayer-books-box img {
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: rounded corners for the image */
+    margin-bottom: 15px; /* Space below the image */
+}
+
+.prayer-books-box h3 {
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+.prayer-books-box a {
+    text-decoration: none; /* Remove underline from link */
+    color: #4caf50; /* Link color */
+    font-weight: bold; /* Bold text */
+    display: block; /* Make the link fill the box */
+    padding: 10px; /* Padding for clickable area */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.prayer-books-box a:hover {
+    background-color: #e0e0e0; /* Darker background on hover */
+}
+
+.prayer-books-box:hover {
+    transform: scale(1.05); /* Slightly enlarge the box on hover */
+}
+.muassasat-books-section {
+    max-width: 1200px; /* Set a maximum width for the section */
+    margin: 40px auto; /* Center the section horizontally */
+    text-align: center; /* Center the text */
+}
+
+.navigation {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between buttons */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 20px; /* Space below the navigation */
+}
+
+.home-button, .prev-button, .next-button {
+    background-color: #4caf50; /* Green background */
+    color: white;; /* White text */
+    padding: 10px 15px; /* Padding for buttons */
+    border: 2px solid; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.home-button:hover, .prev-button:hover, .next-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.prev-next-buttons {
+    display: flex; /* Use flexbox for layout */
+    gap: 10px;/* Space between buttons */
+}
+
+.books-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Space between boxes */
+}
+
+.book-box {
+    background-color: #ffffff; /* White background for the box */
+    border: 1px solid #ccc; /* Border for the box */
+    border-radius: 5px; /* Rounded corners */
+    width: 50px; /* Fixed width for the box */
+    height: 50px; /* Fixed height for the box */
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    font-size: 20px; /* Font size for the number */
+    color: #333; /* Text color */
+    text-decoration: none; /* Remove underline from link */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.book-box a {
+    color: inherit; /* Inherit color from parent */
+    text-decoration: none; /* Remove underline from link */
+}
+
+.book-box:hover {
+    background-color: #e0e0e0; /* Change background on hover */
+    cursor: pointer; /* Change cursor to pointer */
+}
+.pages-button {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    padding: 10px 15px; /* Padding for buttons */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.pages-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between the boxes */
+}
+
+.about-box {
+    background-color: #ffffff; /* White background */
+    color: #333; /* Dark text color for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Padding inside the box */
+    width: 80%; /* Box width relative to the container */
+    max-width: 500px; /* Limit maximum width */
+    text-align: center; /* Center text */
+}
+
+.about-box p {
+    margin-bottom: 15px; /* Space below paragraphs */
+}
+
+.learn-more-button {
+    background-color: #4caf50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.learn-more-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+/* General styles for mobile screens */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Adjust text size for smaller screens */
+    }
+
+    nav {
+        flex-direction: column; /* Stack the nav elements vertically */
+        align-items: flex-start;
+    }
+
+    nav .logo {
+        margin-bottom: 10px; /* Add space below the logo */
+        font-size: 20px; /* Reduce logo size */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        width: 100%; /* Full width for the menu */
+    }
+
+    nav ul li {
+        width: 100%; /* Menu items take full width */
+        text-align: left; /* Align text to the left */
+    }
+
+    nav ul li a {
+        padding: 10px 15px; /* Adjust padding for better touch targets */
+        font-size: 16px; /* Adjust font size */
+    }
+
+    .hero h1 {
+        font-size: 22px; /* Reduce font size for the hero header */
+    }
+
+    .hero p {
+        font-size: 14px; /* Adjust paragraph size */
+    }
+
+    .cta-button {
+        padding: 10px 15px; /* Reduce button padding */
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .books-container, .social-media {
+        flex-direction: column; /* Stack items vertically */
+        gap: 15px; /* Add space between stacked items */
+    }
+
+    .prayer-books-box, .about-box {
+        width: 90%; /* Take most of the screen width */
+        max-width: none; /* Remove max-width restriction */
+    }
+
+    footer {
+        font-size: 12px; /* Reduce font size for footer text */
+    }
+
+    .social-media a {
+        font-size: 16px; /* Adjust social media icon size */
+        padding: 8px; /* Adjust padding */
+    }
+}
+
+/* Styles for very small screens */
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 14px; /* Further reduce menu font size */
+    }
+
+    .hero {
+        padding: 50px 10px; /* Reduce padding */
+    }
+
+    .hero h1 {
+        font-size: 18px; /* Smaller hero title font size */
+    }
+
+    .hero p {
+        font-size: 12px; /* Smaller paragraph size */
+    }
+
+    .cta-button {
+        padding: 8px 10px; /* Smaller button size */
+        font-size: 12px; /* Smaller font size */
+    }
+
+    .prayer-books-box, .about-box {
+        width: 95%; /* Take almost full screen width */
+    }
+
+    footer {
+        padding: 10px; /* Reduce footer padding */
+    }
+
+    .social-media a {
+        margin: 0 3px; /* Reduce spacing between icons */
+        font-size: 14px; /* Smaller icons */
+    }
+}
+.menu-toggle {
+    display: none; /* Hidden by default */
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show on mobile */
+    }
+
+    nav ul {
+        display: none; /* Hidden by default */
+        flex-direction: column; /* Stack menu items */
+        width: 100%; /* Full width for the menu */
+        background-color: rgba(76, 175, 80, 0.9); /* Background for dropdown */
+        position: absolute; /* Position the dropdown */
+        top: 100%; /* Below the nav */
+        left: 0;
+        z-index: 1000;
+    }
+
+    nav ul.show {
+        display: flex; /* Show the menu when toggled */
+    }
+}
+/* Center content */
+.books-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* Aligns content vertically */
+    min-height: 100vh; /* Full viewport height */
+}
+
+/* Make entire box clickable */
+.clickable-box {
+    display: block;
+    text-decoration: none;
+    color: inherit; /* Inherit text color */
+}
+
+.clickable-box img {
+    max-width: 100%; /* Scale image to container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.prayer-books-box {
+    width: 100%; /* Make it full width */
+    max-width: 400px; /* Restrict maximum width */
+    text-align: center;
+    margin: 10px;
+}
+@media (max-width: 768px) {
+    .prayer-books-box {
+        max-width: 200%; /* Wider on smaller screens */
+    }
+}
+html, body {
+    height:100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* This makes the main content area take up available space */
+}
+
+footer {
+    background-color: rgba(76, 175, 80, 0.9); /* Same as header */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    margin-top: 20px; /* Space above footer */
+    border-radius: 5px; /* Rounded corners for footer */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+.contact {
+    padding: 50px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack items vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+.contact h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact .contact-box {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 30px;
+    width: 100%; /* Full width */
+    max-width: 500px; /* Limit to a maximum width */
+    margin-top: 40px;
+}
+
+.contact-item {
+    background-color: white;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #4caf50;
+}
+
+.contact-item p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.contact-item .btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.contact-item .btn:hover {
+    background-color: #45a049;
+}

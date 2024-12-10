@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../AMIGO"
+		},
+		{
+			"path": "../../../HAQSLAM"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "HAQSLAM"
+	}
+}
